@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpsStock</title>
+    <link rel="stylesheet" href="calendar.css">
+    <script src="cal.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a class="active" href="duty.html">On duty</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="stock.html">Stock</a>
+      </div> 
+      <div class="calendar-container">
+        <header class="calendar-header">
+            <h1>Calendário Semanal - Novembro</h1>
+        </header>
+        <div class="calendar">
+            <!-- Horários -->
+            <div class="time-column">
+                <div class="time-slot"></div>
+                <div class="time-slot">08:00</div>
+                <div class="time-slot">09:00</div>
+                <div class="time-slot">10:00</div>
+                <div class="time-slot">11:00</div>
+                <div class="time-slot">12:00</div>
+                <div class="time-slot">13:00</div>
+                <div class="time-slot">14:00</div>
+                <div class="time-slot">15:00</div>
+                <div class="time-slot">16:00</div>
+                <div class="time-slot">17:00</div>
+            </div>
+            <!-- Dias da semana -->
+            <div class="day-column">
+                <div class="day-header">Segunda</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Terça</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Quarta</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Quinta</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Sexta</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Sábado</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+            <div class="day-column">
+                <div class="day-header">Domingo</div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+                <div class="day-slot"></div>
+            </div>
+        </div>
+    </div>
+        <!-- Modal para criação de evento -->
+        <div id="eventModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Criar Evento</h2>
+                <label for="eventName">Nome do Evento:</label>
+                <input type="text" id="eventName" placeholder="Digite o nome do evento">
+                <button id="saveEvent">Salvar</button>
+                <button id="cancelEvent">Cancelar</button>
+            </div>
+        </div>
+</body>
+</html>

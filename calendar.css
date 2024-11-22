@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.navbar a {
+    color: rgb(0, 0, 0);
+}
+
+.calendar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+}
+
+.calendar {
+    display: flex;
+    border-top: 2px solid #ddd;
+}
+
+.time-column {
+    width: 90px;
+    border-right: 2px solid #ddd;
+}
+
+.time-slot {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ddd;
+}
+
+.day-column {
+    flex: 1;
+    border-right: 1px solid #ddd;
+}
+
+.day-header {
+    height: 60px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ddd;
+}
+
+.day-slot {
+    height: 60px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.day-slot:hover {
+    background-color: #8f8f8f;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    z-index: 1000;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content h2 {
+    margin: 0 0 10px;
+}
+
+.modal-content button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-content #saveEvent {
+    background-color: #4caf50;
+    color: white;
+}
+
+.modal-content #cancelEvent {
+    background-color: #f44336;
+    color: white;
+}
+
+.day-slot.event {
+    background-color: #4caf50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+    cursor: pointer;
+}
+
+.day-slot.event:hover {
+    background-color: #45a049;
+}
+
+/* Botão para excluir eventos */
+.delete-event {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    visibility: hidden; /* Apenas visível ao passar o mouse */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s;
+}
+
+.day-slot.event:hover .delete-event {
+    visibility: visible;
+    opacity: 1;
+}
